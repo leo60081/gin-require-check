@@ -26,7 +26,6 @@ type query struct {
 }
 
 func main() {
-	app := gin.New()
 
 	r := middleware.NewRequestCheck()
 	r.BindBody(&body{})
@@ -36,15 +35,15 @@ func main() {
 
 	//r.SetBadrequestHandler(b)
 
+	app := gin.New()
 	app.POST("person/:person-id", r.CheckBind, echo)
 	app.Run(":8080")
 }
 
-/*
 func b(c *gin.Context, err error) {
 	log.Println("oops~ ", err.Error())
 	c.Abort()
-}*/
+}
 
 func echo(c *gin.Context) {
 	var b body
