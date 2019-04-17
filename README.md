@@ -10,4 +10,4 @@
 5. 便於取用 簡化代碼
 
 ## 範例：
-請參閱 [example](https://github.com/leo60081/gin-require-check/example/main.go)
+請參閱 [example](https://github.com/leo60081/gin-require-check/blob/master/example/main.go)
